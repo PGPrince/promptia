@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:promptia/features/auth/widgets/auth_input.dart';
 
 class Lgoin extends StatefulWidget {
   const Lgoin({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _LgoinState extends State<Lgoin> {
       appBar: AppBar(),
       body: Center(
         child: SingleChildScrollView(
-          padding: EdgeInsets.only(left: 10),
+          padding: EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
               Align(
@@ -25,8 +26,11 @@ class _LgoinState extends State<Lgoin> {
                 alignment: Alignment.centerLeft,
                 child: Text('Welcome back'),
               ),
-              SizedBox(height: 10),
-              TextFormField(decoration: InputDecoration(hintText: 'Email')),
+              SizedBox(height: 20),
+              AuthInput(label: 'Email', hintText: 'Enter your email'),
+              SizedBox(height: 20),
+              AuthInput(label: 'Password', hintText: 'Enter your password'),
+              SizedBox(height: 20),
             ],
           ),
         ),
