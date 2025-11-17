@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:promptia/features/auth/widgets/auth_input.dart';
+import 'package:promptia/utils/style_constant.dart';
 
 class Lgoin extends StatefulWidget {
   const Lgoin({Key? key}) : super(key: key);
@@ -34,16 +35,19 @@ class _LgoinState extends State<Lgoin> {
               ElevatedButton(
                 onPressed: () {},
                 child: Text('Login'),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                    Colors.black,
-                  ),
-                  foregroundColor: MaterialStateProperty.all<Color>(
-                    Colors.white,
-                  ),
-                  minimumSize: MaterialStateProperty.all<Size>(
-                    const Size.fromHeight(40.0),
-                  ),
+                style: CommonButtonStyle(),
+              ),
+              SizedBox(height: 10),
+              Text('-- OR --'),
+              Text.rich(
+                TextSpan(
+                  text: "Don't hava an account? ",
+                  children: [
+                    TextSpan(
+                      text: "Sign up",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
               ),
             ],
