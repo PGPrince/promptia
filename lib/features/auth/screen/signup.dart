@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:promptia/features/auth/widgets/auth_input.dart';
 import 'package:promptia/utils/style_constant.dart';
 
-class Lgoin extends StatefulWidget {
-  const Lgoin({Key? key}) : super(key: key);
+class Signup extends StatefulWidget {
+  const Signup({Key? key}) : super(key: key);
 
   @override
-  State<Lgoin> createState() => _LgoinState();
+  State<Signup> createState() => _LgoinState();
 }
 
-class _LgoinState extends State<Lgoin> {
+class _LgoinState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +25,12 @@ class _LgoinState extends State<Lgoin> {
               ),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Welcome back'),
+                child: Text('Welcome to the world of AI chats prompts'),
               ),
               SizedBox(height: 20),
-              AuthInput(label: 'Email', hintText: 'Enter your email'),
+              AuthInput(label: 'Name', hintText: 'Enter your name'),
+              SizedBox(height: 20),
+              AuthInput(label: 'Email', hintText: 'Enter your Email'),
               SizedBox(height: 20),
               AuthInput(
                 label: 'Password',
@@ -36,19 +38,25 @@ class _LgoinState extends State<Lgoin> {
                 isPasswordField: true,
               ),
               SizedBox(height: 20),
+              AuthInput(
+                label: 'Confirm Password',
+                hintText: 'Enter your confirm password',
+                isPasswordField: true,
+              ),
+              SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Login'),
+                child: Text('Sign Up'),
                 style: CommonButtonStyle(),
               ),
               SizedBox(height: 10),
               Text('-- OR --'),
               Text.rich(
                 TextSpan(
-                  text: "Don't hava an account? ",
+                  text: "Already hava an account? ",
                   children: [
                     TextSpan(
-                      text: "Sign up",
+                      text: "Sign In",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],
