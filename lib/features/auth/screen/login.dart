@@ -31,6 +31,21 @@ class _LgoinState extends State<Lgoin> {
               SizedBox(height: 20),
               AuthInput(label: 'Password', hintText: 'Enter your password'),
               SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('Login'),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(
+                    Colors.black,
+                  ),
+                  foregroundColor: MaterialStateProperty.all<Color>(
+                    Colors.white,
+                  ),
+                  minimumSize: MaterialStateProperty.all<Size>(
+                    const Size.fromHeight(40.0),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
