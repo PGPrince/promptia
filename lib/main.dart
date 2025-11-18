@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       getPages: Pages.pages,
       debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.fadeIn,
       title: 'Promptia',
       theme: ThemeData(
         colorScheme: ColorScheme.light(primary: Colors.black),
