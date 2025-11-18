@@ -1,8 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:form_validator/form_validator.dart';
+import 'package:get/route_manager.dart';
 import 'package:promptia/features/auth/widgets/auth_input.dart';
 import 'package:promptia/utils/style_constant.dart';
 import 'package:promptia/utils/type_def.dart';
+import 'package:promptia/routes/routes_name.dart';
 
 class Signup extends StatefulWidget {
   const Signup({Key? key}) : super(key: key);
@@ -102,6 +105,8 @@ class _SignupState extends State<Signup> {
                       TextSpan(
                         text: "Sign In",
                         style: TextStyle(fontWeight: FontWeight.bold),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () => Get.toNamed(RoutesName.login),
                       ),
                     ],
                   ),
