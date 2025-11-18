@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         ),
       ),
-      home: const Signup(),
+      home: const Lgoin(),
     );
   }
 }
