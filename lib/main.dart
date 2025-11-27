@@ -6,8 +6,12 @@ import 'package:promptia/features/auth/screen/signup.dart';
 import 'package:promptia/features/auth/widgets/auth_input.dart';
 import 'package:promptia/routes/routes_name.dart';
 import 'package:promptia/routes/pages.dart';
+import 'package:promptia/services/supabase_service.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Get.putAsync<SupabaseService>(() async => SupabaseService());
   runApp(const MyApp());
 }
 
